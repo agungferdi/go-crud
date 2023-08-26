@@ -32,7 +32,7 @@ func main() {
 	fs := http.FileServer(http.Dir("assets"))
 	http.Handle("/assets/", http.StripPrefix("/assets/", fs))
 
-	http.ListenAndServe("0.0.0.0:8000", nil)
+	http.ListenAndServe("0.0.0.0:8080", nil)
 }
 
 // ... (indexHandler, updateHandler, and deleteHandler functions here)
