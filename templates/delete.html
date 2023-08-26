@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Transaction</title>
+</head>
+<body>
+<h2>Delete Transaction</h2>
+<form action="/delete" method="POST">
+    <p>Are you sure you want to delete this transaction?</p>
+    <input type="hidden" name="transaction_id" value="{{ .ID }}">
+    <input type="submit" value="Delete">
+</form>
+<a href="/">Back to Home</a>
+</body>
+</html>
