@@ -30,9 +30,10 @@ func main() {
 	http.HandleFunc("/delete", deleteHandler)
 	// Serve static assets from the "assets" directory
 	fs := http.FileServer(http.Dir("assets"))
+
 	http.Handle("/assets/", http.StripPrefix("/assets/", fs))
 
-	http.ListenAndServe("0.0.0.0:8080", nil)
+	http.ListenAndServe("localhost:9990", nil)
 }
 
 // ... (indexHandler, updateHandler, and deleteHandler functions here)
